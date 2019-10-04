@@ -109,7 +109,7 @@ class PyppeteerMiddleware(object):
             await self.page.waitFor(random.random() * 400)  # milliseconds
             await self.page.hover('#TPL_password_1')
             await self.page.click('#TPL_password_1')
-            await self.page.keyboard.type('xyz998123.', delay=random.random() * 600)  # 控制输入速度
+            await self.page.keyboard.type('***', delay=random.random() * 600)  # 控制输入速度
             await self.page.waitFor(random.random() * 800)
             navigationPromise = asyncio.ensure_future(self.page.waitForNavigation(timeout=0))
             await self.page.click('#J_SubmitStatic')                                  # 点击鼠标可能会出现验证码/我的淘宝
@@ -131,7 +131,7 @@ class PyppeteerMiddleware(object):
                 await self.page.mouse.up()  # 释放鼠标会需要重新输入密码
                 await self.page.hover('#TPL_password_1')
                 await self.page.click('#TPL_password_1')
-                await self.page.keyboard.type('xyz998123.', delay=random.random() * 400)  # 控制输入速度
+                await self.page.keyboard.type('***', delay=random.random() * 400)  # 控制输入速度
                 await self.page.waitFor(random.random() * 600)
                 navigationPromise = asyncio.ensure_future(self.page.waitForNavigation(timeout=0))
                 await self.page.click('#J_SubmitStatic')  # 点击鼠标可能会出现验证码/我的淘宝
